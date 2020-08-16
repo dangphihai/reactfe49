@@ -1,0 +1,3 @@
+#Trừ files trong folder node_modules
+/node_modules
+
