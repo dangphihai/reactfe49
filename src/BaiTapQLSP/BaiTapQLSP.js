@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
+import SanPham from './SanPham'
 
 export default class BaiTapQLSP extends Component {
 
     state = {
         sanPhamChiTiet: this.props.mangSP[0]
     }
-
+    /*Xác định nơi lưu trữ state (giá trị làm thay đổi giao diện)
+    - Nơi chứa giao diện binding dữ liệu đó ra (trực tiếp hoặc gián tiếp)
+    - Nơi chứa control (nút nhấn) làm thay đổi giá trị state đó (trực tiếp hoặc gián tiếp)
+    */
     renderSanPham = () => {
         return this.props.mangSP?.map((sanPham, index) => {
-            return <div className="col-3 container">
-                <div className="card">
-                    <img className="card-img-top" src={sanPham.hinhAnh} alt style={{ height: 250 }} />
-                    <div className="card-body">
-                        <h4 className="card-title">{sanPham.tenSP}</h4>
-                        <p className="card-text">{sanPham.gia}</p>
-                        <button onClick={() => {
-                            this.xemChiTiet(sanPham)
-                        }} className="btn btn-primary">Xem chi tiết</button>
-                    </div>
-                </div>
+            return <div className="col-4" key={index}>
+                <SanPham sp={sanPham} xemChiTiet={this.xemChiTiet}/>
             </div>
         })
     }
@@ -30,6 +25,7 @@ export default class BaiTapQLSP extends Component {
             sanPhamChiTiet: spClick
         })
     }
+
     render() {
 
         let {maSP, tenSP, hinhAnh, manHinh, cameraTruoc, cameraSau, heDieuHanh, gia, ram, rom} = this.state.sanPhamChiTiet;

@@ -4,7 +4,7 @@ import ThongTinSinhVien from './ThongTinSinhVien'
 export default class DemoProps extends Component {
     sinhVien = {
         hoTen: 'Nguyễn Văn A',
-        hinhAnh: '',
+        hinhAnh: 'https://api.adorable.io/avatars/152/teo',
         lop: 'FrontEnd49'
     }
 

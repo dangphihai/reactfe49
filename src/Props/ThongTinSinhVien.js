@@ -9,7 +9,7 @@ export default class ThongTinSinhVien extends Component {
         return (
             <div style={{width:200}}>
                 <div className="card text-left">
-                    <img style={{width:'100%'}} className="card-img-top" src="" alt="" />
+                    <img style={{width:'100%'}} className="card-img-top" src={this.props.sinhVien.hinhAnh} alt="" />
                     <div className="card-body">
                         <h4 className="card-title">Họ tên: {this.props.sinhVien.hoTen}</h4>
                         <p>Lớp: {this.props.sinhVien.lop}</p>
