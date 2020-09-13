@@ -18,6 +18,9 @@ import BaiTapGioHang from './Props/BaiTapGioHang/BaiTapGioHang';
 import BaiTapGioHangRedux from './BaiTapRedux/BaiTapGioHangRedux/BaiTapGioHangRedux';
 import BaiTapGameTaiXiu from './BaiTapRedux/BaiTapGameTaiXiu/BaiTapGameTaiXiu';
 
+import FormSinhVien from './ReactForm/FormSinhVien';
+import DanhSachSinhVien from './ReactForm/DanhSachSinhVien';
+
 function App() {
   
 //   let mangSanPham = [
@@ -39,7 +42,8 @@ function App() {
       {/* <BaiTapQLSP mangSP={mangSanPham}/> */}
       {/* <BaiTapGioHang/> */}
       {/* <BaiTapGioHangRedux/> */}
-      <BaiTapGameTaiXiu/>
+      {/* <BaiTapGameTaiXiu/> */}
+      <DanhSachSinhVien/>
     </div>
   );
 }
